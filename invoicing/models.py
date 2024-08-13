@@ -112,10 +112,8 @@ class ApartmentInstallment(InstallmentBase):
     sent_to_sap_at = models.DateTimeField(
         verbose_name=_("sent to SAP at"), null=True, blank=True
     )
-    # Metadata fields
-    handler = CharPGPPublicKeyField(
-        verbose_name=_("handler"), max_length=200, blank=True
-    )
+
+    handler = models.CharField(max_length=200, blank=True)
 
     objects = ApartmentInstallmentQuerySet.as_manager()
 
