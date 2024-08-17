@@ -113,7 +113,7 @@ class ApartmentInstallment(InstallmentBase):
         verbose_name=_("sent to SAP at"), null=True, blank=True
     )
 
-    handler = models.CharField(max_length=200, blank=True)
+    handler = models.CharField(verbose_name=_("handler"), max_length=200, blank=True)
 
     objects = ApartmentInstallmentQuerySet.as_manager()
 
